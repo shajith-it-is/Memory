@@ -57,7 +57,7 @@ let chosenIds = [];
 function fillGrid() {
     imgArray.forEach((element,index) => {
         const card = document.createElement('img');
-        card.setAttribute('src','/assets/blank.jpg');
+        card.setAttribute('src','assets/blank.jpg');
         card.setAttribute('alt','blank');
         card.setAttribute('data-id',index);
         card.addEventListener('click',flipCard);
@@ -73,12 +73,12 @@ function checkMatch() {
         if(chosenCards[0] == chosenCards[1]) {
             alert('right');
             chosenIds.forEach((element)=> {
-                cards[element].setAttribute('src','/assets/right.jpg');
+                cards[element].setAttribute('src','assets/right.jpg');
             });
         }
         else {
             chosenIds.forEach((element)=> {
-                cards[element].setAttribute('src','/assets/blank.jpg');
+                cards[element].setAttribute('src','assets/blank.jpg');
             });
         }
         chosenCards = [];
