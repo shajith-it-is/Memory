@@ -74,6 +74,8 @@ function checkMatch() {
             alert('right');
             chosenIds.forEach((element)=> {
                 cards[element].setAttribute('src','./assets/right.jpg');
+                cards[element].removeEventListener('click',flipCard);
+                cards[element].style.cursor = 'not-allowed';
             });
         }
         else {
